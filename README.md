@@ -1,5 +1,5 @@
 # TFRecordCore
-Cross-platform .NET5 Library to Read and Write TFRecord files, with out-of-the-box support for Tensorflow's Example and Feature protobufs.
+Cross-platform .NET 5.0 C# Library to Read and Write TFRecord files, with out-of-the-box support for Tensorflow's Example and Feature protobufs.
 
 # Description
 This repository is a line-per-line C# conversion of the Java source files (Apache Licence 2.0) found in here:
