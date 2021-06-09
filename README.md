@@ -2,34 +2,40 @@
 Cross-platform .NET 5.0 C# Library to Read and Write TFRecord files, with out-of-the-box support for Tensorflow's Example and Feature protobufs.
 
 # Description
-This repository is a line-per-line C# conversion of the Java source files (Apache Licence 2.0) found in here:
+Line-per-line C# conversion of the Java sources for **TFRecordReader** and **TFRecordWriter** taken from Tensorflow's Ecosystem repo (Apache Licence 2.0):
 
-https://github.com/tensorflow/ecosystem/blob/master/hadoop/src/main/java/org/tensorflow/hadoop/util/
+https://github.com/tensorflow/ecosystem/blob/master/hadoop/src/main/java/org/tensorflow/hadoop/util/ 
 
-Method names and variable names were kept the same, with small differences related to the peculiarities of the .Net Framework vs. the Java Library or casing conventions (Read/read)
+Method names and variable names were kept the same, with small differences related to casing conventions (e.g. read -> Read) or the peculiarities of the .NET Framework vs. the Java Library (e.g. ByteBuffer -> BitConverter).
 
 # Requirements
-.Net 5.0
+.NET 5.0
 
-Tested under Windows 10 and macOS. It's reasonable to assume it should work unmodified under Linux distros supporting .Net 5.0
+Tested under Windows 10 and macOS. It's reasonable to assume it should work unmodified under Linux distros supporting .NET 5.0
 
 # NuGet Dependencies
 - [Crc32.NET](https://www.nuget.org/packages/Crc32.NET)
 - [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf)
 
 # Updating the Protobufs
-This repository works right out of the box, but Tensorflow's definition for the *Example* and *Feature* protobufs could change.
-These two scripts will download the latest *proto* files from the Tensorflow repository and run Google's **protoc** to regenerate the C# files (external/Example.cs and external/Feature.cs):
+This repository works right out of the box because it includes working C# files for the *Example* and *Feature* protobufs (external/Example.cs and external/Feature.cs)
+
+However, Tensorflow's definition for the *Example* and *Feature* protobufs could change.
+These two scripts will download the latest *proto* files from the Tensorflow repository and run Google's **protoc** to regenerate the C# files:
 - external/update-win64.bat
 - external/update-macos.sh
 
-Google's **protoc** binaries (required for previous step) version 3.17.1 are also included. If there's ever the need to use a newer version, update them manually and change the scripts accordingly.
+Google's **protoc** binaries (required for the scripts above) version 3.17.1 are also included. If there's ever the need to use a newer version, update them manually and change the scripts accordingly.
 
 # Usage
 
 You can use the source code in the **Testing** project as a starting point:
 
 ```csharp
+using TensorFlow;
+
+...
+
 var example = new Example();
 example.Features = new Features();
 var feat1 = new Feature();
