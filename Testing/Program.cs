@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using Tensorflow;
-using Tensorflow.Hadoop.Util;
 
 class Program
 {

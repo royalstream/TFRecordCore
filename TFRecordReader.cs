@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-namespace Tensorflow.Hadoop.Util
+namespace Tensorflow
 {
     /* Java reference (Apache Licence 2.0) https://github.com/tensorflow/ecosystem/blob/master/hadoop/src/main/java/org/tensorflow/hadoop/util/TFRecordReader.java
      * This C# class is a line-per-line conversion of the Java class mentioned above. Even variable names were kept the same.

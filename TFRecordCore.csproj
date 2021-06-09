@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Steven Burns 2021</Authors>
     <Company />
-    <RootNamespace>Tensorflow.Hadoop.Util</RootNamespace>
+    <RootNamespace>Tensorflow</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

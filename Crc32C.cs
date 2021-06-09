@@ -1,4 +1,4 @@
-namespace Tensorflow.Hadoop.Util
+namespace Tensorflow
 {
     /* Java reference (Apache Licence 2.0) https://github.com/tensorflow/ecosystem/blob/master/hadoop/src/main/java/org/tensorflow/hadoop/util/Crc32C.java
      * This C# file includes a line-per-line conversion of the maskedCrc32c method in the Java class mentioned above. 
