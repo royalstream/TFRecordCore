@@ -84,7 +84,8 @@ namespace Tensorflow
             for (int nread = 0; nread < buffer.Length; nread += nbytes)
             {
                 nbytes = inp.Read(buffer, nread, buffer.Length - nread);
-                if (nbytes < 0) throw new EndOfStreamException("End of file reached before reading fully.");
+                // Java returns -1 on EOF but .NET returns 0
+                if (nbytes <= 0) throw new EndOfStreamException("End of file reached before reading fully.");
             }
         }
 
