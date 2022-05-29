@@ -1,5 +1,5 @@
 # TFRecordCore
-Cross-platform .NET 5.0 C# Library to Read and Write TFRecord files, with out-of-the-box support for Tensorflow's Example and Feature protobufs.
+Cross-platform .NET 5.0/6.0 C# Library to Read and Write TFRecord files, with out-of-the-box support for Tensorflow's Example and Feature protobufs.
 
 # Description
 Line-per-line C# conversion of the Java sources for **TFRecordReader** and **TFRecordWriter** taken from Tensorflow's Ecosystem repo (Apache Licence 2.0):
@@ -11,7 +11,11 @@ Method names and variable names were kept the same, with small differences relat
 # Requirements
 .NET 5.0
 
-Tested under Windows 10 and macOS. It's reasonable to assume it should work unmodified under Linux distros supporting .NET 5.0
+Tested under Windows 10 and macOS. It's reasonable to assume it should work unmodified under Linux distros supporting .NET 5.0/6.0
+
+# Using .NET 6.0
+
+Change the target framework in the project file. It just works.
 
 # NuGet Dependencies
 - [Crc32.NET](https://www.nuget.org/packages/Crc32.NET)
