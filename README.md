@@ -11,11 +11,9 @@ Method names and variable names were kept the same, with small differences relat
 # Requirements
 .NET 5.0
 
-Tested under Windows 10 and macOS. It's reasonable to assume it should work unmodified under Linux distros supporting .NET 5.0/6.0
+**Using .NET 6.0**: Change the target framework in the project file. It just works.
 
-# Using .NET 6.0
-
-Change the target framework in the project file. It just works.
+Tested under Windows 10, Windows 11 and macOS Monterrey. It's reasonable to assume it should work unmodified under Linux distros supporting .NET 5.0/6.0
 
 # NuGet Dependencies
 - [Crc32.NET](https://www.nuget.org/packages/Crc32.NET)
